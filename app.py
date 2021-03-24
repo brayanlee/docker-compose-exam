@@ -7,11 +7,11 @@ app = Flask(__name__)
 redis = Redis(host='redis', port=6379)
 
 images = [
-    "docker-machine-01.jpg",
-    "docker-machine-02.jpg",
-    "docker-machine-03.jpg",
-    "docker-machine-04.jpg",
-    "docker-machine-05.jpg"
+    "cloud-01.png",
+    "cloud-02.png",
+    "cloud-03.png",
+    "cloude-04.png",
+    "cloud-05.png"
 ]
 
 @app.route('/')
@@ -23,7 +23,7 @@ def index():
 
 # Main
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 80))
+    port = int(os.environ.get("PORT", 8899))
     try:
         app.run(host="0.0.0.0", port=port, debug=True)
     except Exception as ex:
