@@ -20,7 +20,7 @@ COPY templates/ $APP_PATH/templates/
 COPY static/ $APP_PATH/static/
 
 # Port number the container should expose
-EXPOSE 80
+EXPOSE 8899
 
 # Run the application
 CMD ["python", "/opt/imageview/app.py"]
