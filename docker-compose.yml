@@ -1,11 +1,11 @@
 version: '3.3'
 services:
-  web:
+  webserver"
     build: .
     ports:
      - "8899:8899"
     depends_on:
-     - redis_db
+     - redis
 
-  redis_db:
+  redis:
     image: redis:4.0
