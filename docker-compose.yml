@@ -1,13 +1,11 @@
 version: '3.3'
 services:
-  # WebServer config
-  webserver:
+  web:
     build: .
     ports:
-     - "80:80"
+     - "8899:8899"
     depends_on:
-     - redis
+     - redis_db
 
-  # Redis config
-  redis:
+  redis_db:
     image: redis:4.0
